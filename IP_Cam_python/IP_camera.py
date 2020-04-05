@@ -25,10 +25,10 @@ class Camera():
         r = requests.get(url)
         r.raise_for_status()
 
-    def _move(self, direction, all_the_way=False):
+    def _move(self, direction, continuasly=False):
         if direction not in self.directions:
             raise Exception("Invalid camera moviment.")
-        url  = self.ptz_ulr + f"&-step={int(not all_the_way)}&-act={direction}"
+        url  = self.ptz_ulr + f"&-step={int(not continuasly)}&-act={direction}"
         r = requests.get(url)
         r.raise_for_status()
 
@@ -39,19 +39,19 @@ class Camera():
         self._position(position, is_goto=False)
 
     def stop(self):
-        self._move("stop",all_the_way=True)
+        self._move("stop",continuasly=True)
 
-    def go_right(self, all_the_way=False):
-        self._move("right", all_the_way=all_the_way)
+    def move_right(self, continuasly=False):
+        self._move("right", continuasly=continuasly)
 
-    def go_left(self, all_the_way=False):
-        self._move("left", all_the_way=all_the_way)
+    def move_left(self, continuasly=False):
+        self._move("left", continuasly=continuasly)
 
-    def go_up(self, all_the_way=False):
-        self._move("up", all_the_way=all_the_way)
+    def move_up(self, continuasly=False):
+        self._move("up", continuasly=continuasly)
 
-    def go_down(self, all_the_way=False):
-        self._move("down", all_the_way=all_the_way)
+    def move_down(self, continuasly=False):
+        self._move("down", continuasly=continuasly)
 
     def video_capture(self):
         return cv2.VideoCapture(self.image_url)
