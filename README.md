@@ -13,16 +13,17 @@ Simple python module for accessing and controlling IP cameras.
 git clone https://github.com/marcosblandim/IP-Cam_python.git
 ```
 
-* pip install requirements from root.
+* pip install requirements from the root of the repository.
 
 ```shell
 pip install -r requirements.txt
 ```
 
-* from the root of the repository you can import the module or run some example code.
+* you can import the module from the root or run the script.
 
 ```shell
-from IP_Cam_python import Camera
+python
+>>> from IP_Cam_python import Camera
 ```
 
 or
