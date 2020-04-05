@@ -29,5 +29,5 @@ python
 or
 
 ```shell
-python ./examples/<some_example_script>
+python ./test.py
 ```
