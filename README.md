@@ -1,7 +1,7 @@
 
 # IP-Cam_python
 
-Simple python module for accessing and controlling IP cameras.
+Simple python module for accessing and controlling some IP cameras.
 
 ## Usage
 
